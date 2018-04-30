@@ -5,4 +5,8 @@
 ipconfig -all
 关闭防火墙
 *b**iaotiyi
->qq
+>root  /root
+>xxxx   /hone/ericcc
+>切换目录
+cd /home/xxx
+
