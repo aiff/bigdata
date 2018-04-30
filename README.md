@@ -7,6 +7,6 @@ ipconfig -all
 *b**iaotiyi
 >root  /root
 >xxxx   /hone/ericcc
->切换目录
+*  cd 切换目录
 cd /home/xxx
 
