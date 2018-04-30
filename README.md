@@ -4,5 +4,5 @@
 
 ipconfig -all
 关闭防火墙
-*biaotiyi
+*b**iaotiyi
 >qq
