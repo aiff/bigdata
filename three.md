@@ -1,13 +1,14 @@
 # bigdata
 #> mv
 
-
-#> useradd   
-
-
-
-#> /ext/profile
+#
+> useradd   
 
 
+#
+> /ext/profile
 
-#> tail
+
+#
+> tail
+>> tail
