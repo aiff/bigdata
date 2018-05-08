@@ -39,9 +39,9 @@ source /etc/profile  生效
 source ~/.bash_profile  生效
 . ~/.bash_profile     生效
 
-####  删除文件   rm  -rf  -r文件 f强制
+> 删除文件   rm  -rf  -r文件 f强制
 
-
+>history !70 查看历史命令和执行第70行
 
 
 #
