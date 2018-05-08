@@ -26,7 +26,10 @@ drwx------.  2 root root 16384 4月  11 21:43 lost+found
 #
 -查看文件
 -查看文件夹
-
+ +   查看文件内容  cat  xx.log </br> more xx.log  一页页按空格键翻页
+  </br>  实时查看内容 tail -f xx.log </br> 实时查看内容
+ +  echo "334">>追加   echo "334">覆盖的 
++   Blue 
 
 #
 > su xxx  切换了root身份，但Shell环境仍然是普通用户的Shell；  
