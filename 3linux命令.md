@@ -4,19 +4,19 @@
 
 **************************
 #mkdir  -p 1/2/3  创建3层目录
-
+<code>
 mkdir  4 5  6 同层
 [root@localhost home]# mkdir 4 5 6
 [root@localhost home]# ls
 4  5  6  cs  lost+found
 [root@localhost home]# ll
 总用量 32
-drwxr-xr-x.  2 root root  4096 5月   8 18:50 4
-drwxr-xr-x.  2 root root  4096 5月   8 18:50 5
-drwxr-xr-x.  2 root root  4096 5月   8 18:50 6
-drwx------. 30 cs   cs    4096 4月  16 17:40 cs
-drwx------.  2 root root 16384 4月  11 21:43 lost+found
-
+-drwxr-xr-x.  2 root root  4096 5月   8 18:50 4
+-drwxr-xr-x.  2 root root  4096 5月   8 18:50 5
+-drwxr-xr-x.  2 root root  4096 5月   8 18:50 6
+-drwx------. 30 cs   cs    4096 4月  16 17:40 cs
+-drwx------.  2 root root 16384 4月  11 21:43 lost+found
+</code>
 
 
 ### bigdata</br>mv  20180427.log /home  移动文件或文件夹
@@ -29,8 +29,10 @@ drwx------.  2 root root 16384 4月  11 21:43 lost+found
  +   查看文件内容  cat  xx.log </br> more xx.log  一页页按空格键翻页
   </br>  实时查看内容 tail -f xx.log </br> 实时查看内容
  +  echo "334">>追加   echo "334">覆盖的 
-+   Blue 
-
+ 
+#
+> tail  -f   根据文件描述符进行追踪，当文件改名或被删除，追踪停止
+>> tail  -F  --retry，根据文件名进行追踪，并保持重试，即该文件被删除或改名后，如果再次创建相同的文件名，会继续追踪
 #
 > su xxx  切换了root身份，但Shell环境仍然是普通用户的Shell；  
 >>su -  xxx   连用户和Shell环境一起切换成root身份了。只有切换了Shell环境才不会出现PATH环境变量错误。su切换成root用户以后，pwd
@@ -40,6 +42,4 @@ drwx------.  2 root root 16384 4月  11 21:43 lost+found
 > /ext/profile
 
 
-#
-> tail  -f   根据文件描述符进行追踪，当文件改名或被删除，追踪停止
->> tail  -F  --retry，根据文件名进行追踪，并保持重试，即该文件被删除或改名后，如果再次创建相同的文件名，会继续追踪
+
