@@ -32,7 +32,7 @@ which这个命令，是去找命令，请问是从哪个里面找的
 *tar
  *   cd
      ***  python  setup.py install***
-     
+  **************   
      
         
         
