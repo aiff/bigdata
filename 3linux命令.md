@@ -30,6 +30,20 @@ mkdir  4 5  6 同层
   </br>  实时查看内容 tail -f xx.log </br> 实时查看内容
  +  echo "334">>追加   echo "334">覆盖的 
  
+####  别名     alias 设置永久 /etc/profile  
+source /etc/profile  生效
+
+
+个人:  .bash_profile 、.bashrc
+~/.bash_profile
+source ~/.bash_profile  生效
+. ~/.bash_profile     生效
+
+####  删除文件   rm  -rf  -r文件 f强制
+
+
+
+
 #
 > tail  -f   根据文件描述符进行追踪，当文件改名或被删除，追踪停止   tail  -100f  倒着查看最新100行 
 >> tail  -F  --retry(被截断还调用-f)，根据文件名进行追踪，并保持重试，即该文件被删除或改名后，如果再次创建相同的文件名，会继续追踪
