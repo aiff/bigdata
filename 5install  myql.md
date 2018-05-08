@@ -19,4 +19,6 @@ groupadd
 [root@sht-sgmhadoopnn-01 local]# chmod -R 755 /usr/local/mysql 
 [root@sht-sgmhadoopnn-01 local]# su - mysqladmin 
 
-
+scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
+>设置开机启用 cp support-files/mysql.server /etc/rc.d/init.d/mysql
+##没写完 待续！！！
