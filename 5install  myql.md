@@ -1,4 +1,22 @@
-ï»¿#å®‰è£…mysqlæ•°æ®åº“5.6  ä¸å¸¸ç”¨
->å®‰è£…jdk 
+#°²×°mysqlÊý¾Ý¿â5.6  ²»³£ÓÃ
+>°²×°jdk 
 .....
-``è¿™ä¸ªé»‘æ˜¯æµ‹è¯•``
+``ÓÃ»§±ä»¯Ê±¼ä Òªµ÷Õû chowm -R root£ºroot xxxjdk``
+****************8
+
+#½¨Á¢×éºÍÓÃ»§
+useradd
+groupadd
+#creat  /etc/my.cnf
+Çå¿Õ vi  ggµÚÒ»ÐÐµÚÒ»×ÖdG
+ÊÚÈ¨¸øcnf chown chmod 
+>[root@sht-sgmhadoopnn-01 local]# chown  mysqladmin:dba /etc/my.cnf 
+[root@sht-sgmhadoopnn-01 local]# chmod  640 /etc/my.cnf  
+[root@sht-sgmhadoopnn-01 etc]# ll my.cnf
+-rw-r----- 1 mysqladmin dba 2201 Aug 25 23:09 my.cnf
+
+[root@sht-sgmhadoopnn-01 local]# chown -R mysqladmin:dba /usr/local/mysql
+[root@sht-sgmhadoopnn-01 local]# chmod -R 755 /usr/local/mysql 
+[root@sht-sgmhadoopnn-01 local]# su - mysqladmin 
+
+
