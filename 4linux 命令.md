@@ -4,8 +4,9 @@
 ##主动防御
 使用 `  fail2ban `  锁定ip
 
-tar
-    cd
-        python  setup.py install
+*tar
+ *   cd
+     *   python  setup.py install
+        
         
 
