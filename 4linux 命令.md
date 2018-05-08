@@ -24,11 +24,11 @@ which这个命令，是去找命令，请问是从哪个里面找的
 
 </code></pre>
 <code>+tar解压，一般会出现什么问题?
-+查看文件大小哪两个命令
-16.查看文件夹大小，哪个命令?
-防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
+                            +查看文件大小哪两个命令
+                            16.查看文件夹大小，哪个命令?
+              防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
 
-</code>
+</code>code
 ##主动防御
 使用 `  fail2ban `  锁定ip
 
