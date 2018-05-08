@@ -1,5 +1,32 @@
 # bigdata
+
 #> mv
+
+**************************
+#mkdir  -p 1/2/3  创建3层目录
+
+mkdir  4 5  6 同层
+[root@localhost home]# mkdir 4 5 6
+[root@localhost home]# ls
+4  5  6  cs  lost+found
+[root@localhost home]# ll
+总用量 32
+drwxr-xr-x.  2 root root  4096 5月   8 18:50 4
+drwxr-xr-x.  2 root root  4096 5月   8 18:50 5
+drwxr-xr-x.  2 root root  4096 5月   8 18:50 6
+drwx------. 30 cs   cs    4096 4月  16 17:40 cs
+drwx------.  2 root root 16384 4月  11 21:43 lost+found
+
+
+
+### bigdata</br>mv  20180427.log /home  移动文件或文件夹
+
+
+### bigdata</br>  cp -r 20180427.log /home  移动文件夹用 -r小写
+#
+-查看文件
+-查看文件夹
+
 
 #
 > su xxx  切换了root身份，但Shell环境仍然是普通用户的Shell；  
