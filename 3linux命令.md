@@ -11,11 +11,11 @@ mkdir  4 5  6 同层
 4  5  6  cs  lost+found
 [root@localhost home]# ll
 总用量 32
--drwxr-xr-x.  2 root root  4096 5月   8 18:50 4
--drwxr-xr-x.  2 root root  4096 5月   8 18:50 5
--drwxr-xr-x.  2 root root  4096 5月   8 18:50 6
--drwx------. 30 cs   cs    4096 4月  16 17:40 cs
--drwx------.  2 root root 16384 4月  11 21:43 lost+found
+>drwxr-xr-x.  2 root root  4096 5月   8 18:50 4
+>drwxr-xr-x.  2 root root  4096 5月   8 18:50 5
+>drwxr-xr-x.  2 root root  4096 5月   8 18:50 6
+>drwx------. 30 cs   cs    4096 4月  16 17:40 cs
+>drwx------.  2 root root 16384 4月  11 21:43 lost+found
 </code>
 
 
