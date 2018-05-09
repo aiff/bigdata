@@ -6,5 +6,5 @@
 + mysql  -uroot  or  -u root -p后面不能加空格 算密码的一部分
 + 创建数据库：
 
-　　　　>CREATE DATABASE db_name;　　//db_name为数据库名
-     +   GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限
+>CREATE DATABASE db_name;　　//db_name为数据库名
++   GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限
