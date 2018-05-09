@@ -9,4 +9,4 @@
 > CREATE DATABASE db_name;　　//db_name为数据库名
 >GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限
 >SHOW processlist;  查看谁在操作
->kill  id 要注意
+> kill  id 要注意
