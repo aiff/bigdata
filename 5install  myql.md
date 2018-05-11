@@ -1,17 +1,36 @@
-#��װmysql���ݿ�5.6  ������
->��װjdk 
+#安装mysql数据库5.6  不常用
+>安装jdk 
 .....
-``�û��仯ʱ�� Ҫ���� chowm -R root��root xxxjdk``
-****************8
+``用户变化时间 要调整 chowm -R root：root xxxjdk``
+drwxr-xr-x. 8 uucp  143      4096 Apr 11  2015 jdk1.8.0_45
+[root@hadoop000 java]# chown -R root:root jdk1.8.0_45
+****************
 
-#��������û�
+#建立组和用户
 useradd
 groupadd
 #creat  /etc/my.cnf
-��� vi  gg��һ�е�һ��dG
-��Ȩ��cnf chown chmod 
+清空 vi  gg第一行第一字dG
+授权给cnf chown chmod 
 >[root@sht-sgmhadoopnn-01 local]# chown  mysqladmin:dba /etc/my.cnf 
 [root@sht-sgmhadoopnn-01 local]# chmod  640 /etc/my.cnf  
+给用户增加执行权限
+chmod u+x a.txt
+
+给用户所属组增加写权限，其他用户删除读权限
+chmod g+w,o-r a.txt
+
+给用户所属组增加读写执行权限
+chmod g=rwx a.txt
+绝对模式
+绝对模式的典型范例
+
+模    式	意义
+777	所有用户都对文件具有读、写和执行权限
+755	文件所有者对文件具有读、写和执行权限;组用户和其他用户对文件需有读和执行权限
+711	文件所有者对文件具有读、写和执行权限;组用户和其他用户对文件具有执行权限
+644	文件所有者可以读、写文件;组用户和其他用户可以读文件
+640	文件所有者可以读、写文件;组用户可以读文件;其他用户不能访问文件
 [root@sht-sgmhadoopnn-01 etc]# ll my.cnf
 -rw-r----- 1 mysqladmin dba 2201 Aug 25 23:09 my.cnf
 
@@ -19,6 +38,6 @@ groupadd
 [root@sht-sgmhadoopnn-01 local]# chmod -R 755 /usr/local/mysql 
 [root@sht-sgmhadoopnn-01 local]# su - mysqladmin 
 
-scripts/mysql_install_db   ��װǰ su - mydsqlxx  �л����û�
->���ÿ������� cp support-files/mysql.server /etc/rc.d/init.d/mysql
-##ûд�� ����������
+scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
+>设置开机启用 cp support-files/mysql.server /etc/rc.d/init.d/mysql
+##没写完 待续！！！
