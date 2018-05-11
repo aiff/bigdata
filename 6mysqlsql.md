@@ -1,9 +1,19 @@
  
 ## 部署安装脚本
 +删除rm  /mysql/data  arch
+
+## mysql配置多端口
+ 
+cp /etc/my.cnf /etc/my3306.cnf
+ 
+cp /etc/my.cnf /etc/my3307.cnf
+
 + delete from  user where user='';  删除空用户
 + delete from  user where user='';  删除空用户
 + mysql  -uroot  or  -u root -p后面不能加空格 算密码的一部分
+
+
+
 ##  创建数据库：
 
 > CREATE DATABASE db_name;　　//db_name为数据库名
