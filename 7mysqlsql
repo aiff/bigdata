@@ -1,1 +1,0 @@
-#select Host,user,password from mysql.user;
