@@ -67,6 +67,10 @@ scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
 [mysqladmin@sht-sgmhadoopnn-01 ~]$ rm -rf my.cnf
 [mysqladmin@sht-sgmhadoopnn-01 ~]$ bin/mysqld_safe &    
 不要忘记，按回车键
+[root@localhost ~]#  ps -ef|grep mysqld
+514        6716   3754  0 08:52 pts/0    00:00:00 /bin/sh bin/mysqld_safe
+514        7371   6716  6 08:52 pts/0    00:00:03 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/hostname.err --pid-file=/usr/local/mysql/data/hostname.pid --socket=/usr/local/mysql/data/mysql.sock --port=3306
+root       7403   5067  0 08:53 pts/2    00:00:00 grep mysqld
 ```
 
 ### 关闭数据库 你有密码就要 
