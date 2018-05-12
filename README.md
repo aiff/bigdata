@@ -1,4 +1,4 @@
-# bigdata
+#2. bigdata
 ##  配置centos
 ### 配置网络
 
