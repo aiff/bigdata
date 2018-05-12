@@ -1,6 +1,9 @@
 # bigdata
-
-#> mv
+# scp   文件从a机器到b机器 
+> scp  xxxx.log root@hadop001:/tmp
+>  scp  -r abc root@hadop001:/tmp </br>  scp  -r abc ip:/tmp
+#  文件从b机器到a机器 (本机)
+  scp   root@hadop001:/tmp、xxxx.log  /tmp
 
 **************************
 #mkdir  -p 1/2/3  创建3层目录
