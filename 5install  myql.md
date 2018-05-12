@@ -39,5 +39,31 @@ chmod g=rwx a.txt
 [root@sht-sgmhadoopnn-01 local]# su - mysqladmin 
 
 scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
->设置开机启用 cp support-files/mysql.server /etc/rc.d/init.d/mysql
+### >设置开机启用 cp support-files/mysql.server /etc/rc.d/init.d/mysql
 ##没写完 待续！！！
+
+
+
+### 
+
+
+[root@sht-sgmhadoopnn-01 ~]# cd /usr/local/mysql
+#将服务文件拷贝到init.d下，并重命名为mysql
+[root@sht-sgmhadoopnn-01 mysql]# cp support-files/mysql.server /etc/rc.d/init.d/mysql 
+#赋予可执行权限
+[root@sht-sgmhadoopnn-01 mysql]# chmod +x /etc/rc.d/init.d/mysql
+#删除服务
+[root@sht-sgmhadoopnn-01 mysql]# chkconfig --del mysql
+#添加服务
+[root@sht-sgmhadoopnn-01 mysql]# chkconfig --add mysql
+[root@sht-sgmhadoopnn-01 mysql]# chkconfig --level 345 mysql on
+
+
+### 9.Start mysql and to view process and listening
+
+[root@sht-sgmhadoopnn-01 mysql]# su - mysqladmin
+[mysqladmin@sht-sgmhadoopnn-01 ~]$ pwd
+/usr/local/mysql
+[mysqladmin@sht-sgmhadoopnn-01 ~]$ rm -rf my.cnf
+[mysqladmin@sht-sgmhadoopnn-01 ~]$ bin/mysqld_safe &    
+不要忘记，按回车键
