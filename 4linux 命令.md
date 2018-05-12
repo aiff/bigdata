@@ -39,8 +39,8 @@ which这个命令，是去找命令，请问是从哪个里面找的
 -16.查看文件夹大小，哪个命令?
 -防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
         
-  rehl6.8 换     源
-  0查看现有的源 rpm -aq | grep yum
+  ### rehl6.8 换     源
+ ### 0查看现有的源 rpm -aq | grep yum
   1、删除rhel自带的yum源
 
 # rpm -aq | grep yum|xargs rpm -e --nodeps
