@@ -39,5 +39,38 @@ which这个命令，是去找命令，请问是从哪个里面找的
 -16.查看文件夹大小，哪个命令?
 -防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
         
-        
+  rehl6.8 换     源
+  0查看现有的源 rpm -aq | grep yum
+  1、删除rhel自带的yum源
+
+# rpm -aq | grep yum|xargs rpm -e --nodeps
+
+2、下载新的yum安装包
+###具体地址自己更新 目前只有6.9
+wget http://mirrors.163.com/CentOS/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm
+wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm
+wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm
+
+3、安装yum包，注意的是标红的必须一起装，有依赖关系
+
+rpm -ivh yum-metadata-parser-xxxx.rpm yum-3.2.29-6xxx.rpm yum-plugin-fastestmirrxxxarch.rpm
+
+4、更改成ali的yum源
+
+# cd /etc/yum.repos.d/
+
+#   wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo 
+
+# ls
+CentOS6-Base-163.repo
+
+把文件里面的$releasever全部替换为版本号，即6
+
+# sed -i 's#$releasever#6#g' CentOS6-Base-163.repo
+
+5、清除yum缓存
+
+# yum clean all
+
+# yum makecache    #将服务器上的软件包信息缓存到本地,以提高搜索安装软件的速度  gogogog!!!
 
