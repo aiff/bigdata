@@ -67,3 +67,10 @@ scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
 [mysqladmin@sht-sgmhadoopnn-01 ~]$ rm -rf my.cnf
 [mysqladmin@sht-sgmhadoopnn-01 ~]$ bin/mysqld_safe &    
 不要忘记，按回车键
+
+
+### 关闭数据库 你有密码就要 
+> mysqladmin shutdown   -uroot -p
+
+
+
