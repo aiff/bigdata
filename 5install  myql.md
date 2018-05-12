@@ -70,7 +70,10 @@ scripts/mysql_install_db   安装前 su - mydsqlxx  切换到用户
 ```
 
 ### 关闭数据库 你有密码就要 
+```C++
 > mysqladmin shutdown   -uroot -p
 
+[mysqladmin@localhost ~]$ ps -ef|grep mysqld
+514        6713   5033  0 08:50 pts/1    00:00:00 grep mysqld
 
-
+```C++
