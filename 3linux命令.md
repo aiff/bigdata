@@ -58,5 +58,14 @@ source ~/.bash_profile  生效
 #
 > /ext/profile
 
+Linux 系统中有软链接和硬链接两种特殊的“文件”。
 
+软链接可以看作是Windows中的快捷方式，可以让你快速链接到目标档案或目录。
+
+硬链接则透过文件系统的inode来产生新档名，而不是产生新档案。
+
+创建方法都很简单：
+
+软链接（符号链接） ln -s   source  target 
+硬链接 （实体链接）ln       source  target
 
