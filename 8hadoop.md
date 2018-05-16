@@ -100,7 +100,7 @@ export PATH=$HADOOP_HOME/bin:$PROTOC_HOME/bin:$FINDBUGS_HOME/bin:$MVN_HOME/bin:$
 
 [root@hadoop000 ~]# which hadoop
 /opt/software/hadoop-2.8.1/bin/hadoop
-···
+```
 4.4配置core-site文件
 etc/hadoop/core-site.xml:
 <configuration>
@@ -121,8 +121,8 @@ etc/hadoop/core-site.xml:
     </property>
 </configuration>
 </configuration>
-···
-4.5ssh
+```
+>4.5ssh
 [root@hadoop000 ~]# rm -rf .ssh
 
 [root@hadoop000 ~]# ssh-keygen
@@ -146,15 +146,15 @@ Sun May 13 21:49:14 CST 2018
 Sun May 13 21:49:17 CST 2018
 [root@hadoop000 ~]# 
 
-4.6 Format the filesystem:
+>4.6 Format the filesystem:
 
   $ bin/hdfs namenode -format 
 
-4.7 java home配置
+>4.7 java home配置
 [root@hadoop000 hadoop]# vi  hadoop-env.sh-------这个目录在hadoop下的etc的hadood下 自带有！！
 export JAVA_HOME=/usr/java/jdk1.8.0_45
 
-4.8 Start NameNode daemon and DataNode daemon:
+>4.8 Start NameNode daemon and DataNode daemon:
 [root@hadoop000 hadoop-2.8.1]# sbin/start-dfs.sh
 Starting namenodes on [localhost]
 localhost: starting namenode, logging to /opt/software/hadoop-2.8.1/logs/hadoop-root-namenode-hadoop000.out
