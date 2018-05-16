@@ -85,6 +85,7 @@ total 348
 4.3配置环境变量
 [root@hadoop000 ~]# vi /etc/profile
 export HADOOP_HOME=/home/ericccc/hadoop-2.8.1
+
 export PATH=$HADOOP_HOME/bin:$PROTOC_HOME/bin:$FINDBUGS_HOME/bin:$MVN_HOME/bin:$JAVA_HOME/bin:$PATH
 [root@hadoop000 ~]# source /etc/profile 执行
 
