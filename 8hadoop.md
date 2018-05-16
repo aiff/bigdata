@@ -59,30 +59,20 @@ tar -xzvf  hadoop-2.8.1.tar.gz
 chown -R root:root hadoop-2.8.1
 4.2解读解压文件
 [root@hadoop000 hadoop-2.8.1]# ll
-total 148
-drwxrwxr-x. 2 root root  4096 Jun  2  2017 bin
-drwxrwxr-x. 3 root root  4096 Jun  2  2017 etc
-drwxrwxr-x. 2 root root  4096 Jun  2  2017 include
-drwxrwxr-x. 3 root root  4096 Jun  2  2017 lib
-drwxrwxr-x. 2 root root  4096 Jun  2  2017 libexec
--rw-rw-r--. 1 root root 99253 Jun  2  2017 LICENSE.txt
--rw-rw-r--. 1 root root 15915 Jun  2  2017 NOTICE.txt
--rw-r--r--. 1 root root  1366 Jun  2  2017 README.txt
-drwxrwxr-x. 2 root root  4096 Jun  2  2017 sbin
-drwxrwxr-x. 4 root root  4096 Jun  2  2017 share
-[root@hadoop000 hadoop-2.8.1]# 
+ 
 bin 执行命令的shell
 etc 配置文件
 lib 库
 sbin 启动和关闭hadoop
 share jar
 
-
+#### 删除非linux的执行脚本
 [root@hadoop000 hadoop-2.8.1]# rm -f bin/*.cmd
 [root@hadoop000 hadoop-2.8.1]# rm -f sbin/*.cmd
 [root@hadoop000 hadoop-2.8.1]# 
-[root@hadoop000 hadoop-2.8.1]# ll bin
+[root@hadoop000 hadoop-2.8.1]# ll bin   确认权限
 total 348
+```
 -rwxrwxr-x. 1 root root 139387 Jun  2  2017 container-executor
 -rwxrwxr-x. 1 root root   6514 Jun  2  2017 hadoop
 -rwxrwxr-x. 1 root root  12330 Jun  2  2017 hdfs
@@ -91,19 +81,20 @@ total 348
 -rwxrwxr-x. 1 root root 156812 Jun  2  2017 test-container-executor
 -rwxrwxr-x. 1 root root  14416 Jun  2  2017 yarn
 [root@hadoop000 hadoop-2.8.1]# 
-
+```
 4.3配置环境变量
 [root@hadoop000 ~]# vi /etc/profile
 export HADOOP_HOME=/home/ericccc/hadoop-2.8.1
 export PATH=$HADOOP_HOME/bin:$PROTOC_HOME/bin:$FINDBUGS_HOME/bin:$MVN_HOME/bin:$JAVA_HOME/bin:$PATH
-[root@hadoop000 ~]# source /etc/profile
+[root@hadoop000 ~]# source /etc/profile 执行
 
 [root@hadoop000 ~]# which hadoop
-/opt/software/hadoop-2.8.1/bin/hadoop
+/home/cs/hadoop-2.8.1/bin/hadoop
+
 ```
 4.4配置core-site文件
 etc/hadoop/core-site.xml:
-<configuration>
+
   里面
 <configuration>
     <property>
@@ -119,7 +110,6 @@ etc/hadoop/core-site.xml:
         <name>dfs.replication</name>
         <value>1</value>
     </property>
-</configuration>
 </configuration>
 ```
 >4.5ssh
@@ -151,8 +141,12 @@ Sun May 13 21:49:17 CST 2018
   $ bin/hdfs namenode -format 
 
 >4.7 java home配置
-[root@hadoop000 hadoop]# vi  hadoop-env.sh-------这个目录在hadoop下的etc的hadood下 自带有！！
+[root@hadoop000 hadoop]# vi     vi etc/hadoop-env.sh  ------这个目录在hadoop下的etc的hadood下 自带有！！
 export JAVA_HOME=/usr/java/jdk1.8.0_45
+/home/cs/jdk1.8.0_161
+出现异常
+
+/home/cs/hadoop-2.8.1/etc/hadoop/hadoop-env.sh: line 18: export: `=/home/cs/jdk1.8.0_161': not a valid identifier
 
 >4.8 Start NameNode daemon and DataNode daemon:
 [root@hadoop000 hadoop-2.8.1]# sbin/start-dfs.sh
