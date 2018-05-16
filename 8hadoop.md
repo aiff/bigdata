@@ -100,7 +100,7 @@ export PATH=$HADOOP_HOME/bin:$PROTOC_HOME/bin:$FINDBUGS_HOME/bin:$MVN_HOME/bin:$
 
 [root@hadoop000 ~]# which hadoop
 /opt/software/hadoop-2.8.1/bin/hadoop
-
+···
 4.4配置core-site文件
 etc/hadoop/core-site.xml:
 <configuration>
@@ -121,6 +121,7 @@ etc/hadoop/core-site.xml:
     </property>
 </configuration>
 </configuration>
+···
 4.5ssh
 [root@hadoop000 ~]# rm -rf .ssh
 
