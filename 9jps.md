@@ -21,3 +21,11 @@ total 8
 [hadoop@hadoop000 .ssh]$ cat id_rsa.pub >> authorized_keys
 [hadoop@hadoop000 .ssh]$ chmod 600 authorized_keys
 ```
+
+开服务报错
+/home/cs/hadoop-2.8.11/etc/hadoop/hadoop-env.sh: line 18: export: `=/home/cs/jdk1.8.0_161': not a valid identifier
+Starting namenodes on [138.147.166.7
+
+
+这个是hadoop-env的格式写错了
+
