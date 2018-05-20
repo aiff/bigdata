@@ -1,10 +1,10 @@
-#  新课
+﻿#  新课
 
 
 
 ### 1  hdfs
 
-
+![hdfs](https://github.com/aiff/bigdata/blob/master/img/hdfs.png)
 
 ### 2 block
 大小  64m    128m（看文档咯）
