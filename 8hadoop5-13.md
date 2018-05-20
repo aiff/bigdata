@@ -149,6 +149,16 @@ export JAVA_HOME=/usr/java/jdk1.8.0_45
 
 /home/cs/hadoop-2.8.1/etc/hadoop/hadoop-env.sh: line 18: export: `=/home/cs/jdk1.8.0_161': not a valid identifier
 
+`````
+sbin/start-dfs.sh
+[Fatal Error] mapred-site.xml:27:1: Content is not allowed in trailing section.
+18/05/20 22:09:41 FATAL conf.Configuration: error parsing conf mapred-site.xml
+org.xml.sax.SAXParseException; systemId: file:/home/cs/hadoop-2.8.11/etc/hadoop/mapred-site.xml; lineNumber: 27; columnNumber: 1; Content is not allowed in trailing section.
+        at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+
+```
+####   mapred-site.xml 格式里面有问题 重新检查下
+
 >4.8 Start NameNode daemon and DataNode daemon:
 [root@hadoop000 hadoop-2.8.1]# sbin/start-dfs.sh
 Starting namenodes on [localhost]
