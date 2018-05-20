@@ -15,3 +15,27 @@
 ### 3.副本数
 
 dfs.replication
+
+NameNode： 文件系统的命名空间(面试题)
+         1.文件名称
+	 2.文件目录结构
+	 3.文件的属性(权限 创建时间 副本数)
+	 4.文件对应哪些数据块-->数据块对应哪些分布在哪些DN节点上 列表  
+	 
+	 存储在内存上
+       
+
+DataNode: 存储数据块+ 数据块的校验和 
+         与NN通信:
+	 1.每隔3秒发送1次心跳 
+	 2.每隔10次心跳发送一次blockReport
+
+	 存储在磁盘上
+
+SecondaryNameNode: 当HA时，SNN不存在了
+         存储: 命令空间镜像文件fsimage + 编辑日志editlog
+	 作用: 定期合并 fsimage +editlog 为新的fsimage,推送给NN，称为检查点 checkpoint
+	 参数: dfs.namenode.checkpoint.period 3600s
+
+	 实验: NN损坏，SNN去恢复
+	 http://hmilyzhangl.iteye.com/blog/1407214
