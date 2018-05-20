@@ -65,7 +65,7 @@ yarn 的两个进程
 
 
 
-web地址  http://192.168.174.133:8088/cluster  牛逼不牛逼  鲜花刷起来！
+
 
 
  
@@ -88,8 +88,8 @@ Job Finished in 262.832 seconds
 Estimated value of Pi is 3.28000000000000000000  大概结果 数据不够大
 
 
-
-
+web地址  http://192.168.174.133:8088/cluster  牛逼不牛逼  鲜花刷起来！
+![pi例子](https://github.com/aiff/bigdata/blob/master/img/pi.png)
         
 
 

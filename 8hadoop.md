@@ -1,4 +1,4 @@
-#到hapdoop了
+﻿#到hapdoop了
 
 ##hadoop1.x 
 > hdfs 存储
@@ -138,8 +138,8 @@ Sun May 13 21:49:17 CST 2018
 [root@hadoop000 ~]# 
 
 >4.6 Format the filesystem:
-
-  $ bin/hdfs namenode -format 
+#慎用  格了里面的元数据都没 ，会生成新的fsimage？？
+  $ bin/hdfs namenode -format   
 
 >4.7 java home配置
 [root@hadoop000 hadoop]# vi     vi etc/hadoop-env.sh  ------这个目录在hadoop下的etc的hadood下 自带有！！
