@@ -3,12 +3,12 @@
 
 
 ## use hadoop 
-1.duiå¯¹å¤–æä¾›æœåŠ¡ Â å’Œé›†ç¾¤
-2.ç¬¬ä¸€æ¬¡é©±åŠ¨æˆ‘ä»¬æ˜¯é…ç½®å½“å‰xxxçš„æ— å¯†ç ä¿¡ä»»
+1.dui¶ÔÍâÌá¹©·şÎñ ?ºÍ¼¯Èº
+2.µÚÒ»´ÎÇı¶¯ÎÒÃÇÊÇÅäÖÃµ±Ç°xxxµÄÎŞÃÜÂëĞÅÈÎ
 
 
 
-å¤„ç†å†æ¬¡shhç™»é™†åè¦è¾“å…¥å¯†ç 
+´¦ÀíÔÙ´ÎshhµÇÂ½ºóÒªÊäÈëÃÜÂë
 
 ```
 [hadoop@hadoop000 ~]$ rm -rf .ssh
@@ -22,10 +22,74 @@ total 8
 [hadoop@hadoop000 .ssh]$ chmod 600 authorized_keys
 ```
 
-å¼€æœåŠ¡æŠ¥é”™
+¿ª·şÎñ±¨´í
 /home/cs/hadoop-2.8.11/etc/hadoop/hadoop-env.sh: line 18: export: `=/home/cs/jdk1.8.0_161': not a valid identifier
 Starting namenodes on [138.147.166.7
 
 
-è¿™ä¸ªæ˜¯hadoop-envçš„æ ¼å¼å†™é”™äº†
+Õâ¸öÊÇhadoop-envµÄ¸ñÊ½Ğ´´íÁË
+
+
+
+
+
+
+YARNÎ±·Ö²¼Ê½²¿Êğ
+[hadoop@hadoop000 hadoop]$ cp mapred-site.xml.template mapred-site.xml  ¼ÇµÃ±¸·İ
+[hadoop@hadoop000 hadoop]$ vi mapred-site.xml
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+
+
+[hadoop@hadoop000 hadoop]$ vi yarn-site.xml:
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+
+
+[hadoop@hadoop000 sbin]$ ./start-yarn.sh
+
+
+
+yarn µÄÁ½¸ö½ø³Ì
+4308 SecondaryNameNode
+5511 ResourceManager
+
+
+
+
+webµØÖ·  http://192.168.174.133:8088/cluster  Å£±Æ²»Å£±Æ  ÏÊ»¨Ë¢ÆğÀ´£¡
+
+
+ 
+ hadoop-2.8.1]$ hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.1.jar pi 5 10
+  ºÜ³ÔÄÚ´æ  ¼ÇµÃ²Ù×÷Ğ¡ĞÄ  
+
+
+Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=590
+        File Output Format Counters 
+                Bytes Written=97
+Job Finished in 262.832 seconds
+Estimated value of Pi is 3.28000000000000000000  ´ó¸Å½á¹û Êı¾İ²»¹»´ó
+
+
+
+
+        
+
 
