@@ -94,6 +94,7 @@ export PATH=$HADOOP_HOME/bin:$PROTOC_HOME/bin:$FINDBUGS_HOME/bin:$MVN_HOME/bin:$
 
 ```
 4.4配置core-site文件
+<！---！>  注释用
 etc/hadoop/core-site.xml:
 
   里面
@@ -103,7 +104,7 @@ etc/hadoop/core-site.xml:
         <value>hdfs://localhost:9000</value>
     </property>
 </configuration>
-
+***********单独配置******
 <>etc/hadoop/hdfs-site.xml:
 
 <configuration>
@@ -142,7 +143,7 @@ Sun May 13 21:49:17 CST 2018
   $ bin/hdfs namenode -format   
 
 >4.7 java home配置
-[root@hadoop000 hadoop]# vi     vi etc/hadoop-env.sh  ------这个目录在hadoop下的etc的hadood下 自带有！！
+[root@hadoop000 hadoop]#      vi etc/hadoop-env.sh  ------这个目录在hadoop下的etc的hadood下 自带有！！
 export JAVA_HOME=/usr/java/jdk1.8.0_45
 /home/cs/jdk1.8.0_161
 出现异常
