@@ -161,6 +161,16 @@ org.xml.sax.SAXParseException; systemId: file:/home/cs/hadoop-2.8.11/etc/hadoop/
 ####   mapred-site.xml 格式里面有问题 重新检查下
 
 >4.8 Start NameNode daemon and DataNode daemon:
+
+[root@localhost ~]#  hdfs dfs -ls /
+18/05/23 18:55:16 WARN ipc.Client: Failed to connect to server: 138.147.166.7/138.147.166.7:9000: try once and fail.
+java.net.ConnectException: 拒绝连接
+        at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+        at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+###  启用失败
+
+
+
 [root@hadoop000 hadoop-2.8.1]# sbin/start-dfs.sh
 Starting namenodes on [localhost]
 localhost: starting namenode, logging to /opt/software/hadoop-2.8.1/logs/hadoop-root-namenode-hadoop000.out
