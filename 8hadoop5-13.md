@@ -168,9 +168,17 @@ java.net.ConnectException: 拒绝连接
         at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
         at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
 ###  启用失败
+NETWORKING=yes 
+HOSTNAME=yourname //在这修改hostname 
+NISDOMAIN=eng-cn.platform.com 
 
-
-
+2.修改/etc/hosts里面的名字 
+＃ vi /etc/hosts 
+127.0.0.1 localhost.localdomain localhost 
+172.17.33.169 yourname //在这修改hostname 
+reboot！！！！
+ls: Call From localhost/127.0.0.1 to 192.168.174.133:9000 failed on connection exception: java.net.ConnectException
+>  查看hostname
 [root@hadoop000 hadoop-2.8.1]# sbin/start-dfs.sh
 Starting namenodes on [localhost]
 localhost: starting namenode, logging to /opt/software/hadoop-2.8.1/logs/hadoop-root-namenode-hadoop000.out
