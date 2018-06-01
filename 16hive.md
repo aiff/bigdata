@@ -41,3 +41,14 @@ hive-site.xml:2:6: The processing instruction target matching "[xX][mM][lL]" is 
 org.xml.sax.SAXParseException; systemId: file:/home/hadoop/app/hive-1.1.0-cdh5.7.0/conf/hive-site.xml; lineNumber: 21; columnNumber: 1; XML document structures must start and end within the same entity.
 ![hive报错](https://github.com/aiff/bigdata/blob/master/img/hiveerror.png)
 发现mysql和hadoop咩起来 被拒绝了  启用她们
+
+HIVE  建表报错
+
+
+hive> create table xxxx(id int);
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException(message:file:/user/hive/warehouse/xxxx is not a directory or unable to create one)
+
+
+
+
+
