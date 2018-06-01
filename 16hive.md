@@ -39,4 +39,5 @@ hive-site.xml:2:6: The processing instruction target matching "[xX][mM][lL]" is 
 [Fatal Error] hive-site.xml:21:1: XML document structures must start and end within the same entity.
 18/06/01 11:43:37 FATAL conf.Configuration: error parsing conf file:/home/hadoop/app/hive-1.1.0-cdh5.7.0/conf/hive-site.xml
 org.xml.sax.SAXParseException; systemId: file:/home/hadoop/app/hive-1.1.0-cdh5.7.0/conf/hive-site.xml; lineNumber: 21; columnNumber: 1; XML document structures must start and end within the same entity.
-
+![hive报错](https://github.com/aiff/bigdata/blob/master/img/hiveerror.png)
+发现mysql和hadoop咩起来 被拒绝了  启用她们
