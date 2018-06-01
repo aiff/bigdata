@@ -199,7 +199,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 5127 Launcher
 16139 SecondaryNameNode
 15853 NameNode
-
+>>  新问题 
 [root@hadoop000 ~]# hdfs dfs -put txt.log /
 [root@hadoop000 ~]# 
 [root@hadoop000 ~]# 
