@@ -49,6 +49,12 @@ hive> create table xxxx(id int);
 FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException(message:file:/user/hive/warehouse/xxxx is not a directory or unable to create one)
 
 
+处理：建立路径即可
+
+/user/hive/warehouse
+
+
+
 
 
 
