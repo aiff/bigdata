@@ -72,7 +72,13 @@ FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTa
 /user/hive/warehouse
 
 
+ 
+>Hive启动时，报错无法找到class，如java.lang.NoClassDefFoundError
 
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/hadoop/hi
+
+
+去检查hive-env.sh  和hadoop-env.sh 
 
 
 
