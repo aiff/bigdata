@@ -1,4 +1,12 @@
 
+
+###  HIVE QL/HQL:类sql 
+SQL ===> MapReduce/Spark/Tez JOB   所有运行很慢  运行进程慢慢慢慢
+###  统一的元数据管理 Mysql/Derby
+hive vs    rdbms
+hivelim里面的事务是鸡肋  insert自动提交
+
+hive适用于什么场景    离线 (外部表)     
 ###  用新的chd安装包安装hive
 
 
@@ -40,7 +48,7 @@ hive-site.xml:2:6: The processing instruction target matching "[xX][mM][lL]" is 
 18/06/01 11:43:37 FATAL conf.Configuration: error parsing conf file:/home/hadoop/app/hive-1.1.0-cdh5.7.0/conf/hive-site.xml
 org.xml.sax.SAXParseException; systemId: file:/home/hadoop/app/hive-1.1.0-cdh5.7.0/conf/hive-site.xml; lineNumber: 21; columnNumber: 1; XML document structures must start and end within the same entity.
 ![hive报错](https://github.com/aiff/bigdata/blob/master/img/hiveerror.png)
-发现mysql和hadoop咩起来 被拒绝了  启用她们
+> 发现mysql和hadoop咩起来 被拒绝了  启用她们
 
 HIVE  建表报错
 
