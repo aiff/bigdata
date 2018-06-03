@@ -10,9 +10,16 @@ hive适用于什么场景    离线 (外部表)
 ###  用新的chd安装包安装hive
 
 
-1.授权
+> 1.授权
+```
 [root@hadoop hadoop]# chown -R hadoop:hadoop hadoop-2.6.0-cdh5.7.0
 [root@hadoop hadoop]# chown -R hadoop:hadoop apache-hive-1.1.0-cdh5.7.0-bin
+```
+检查HOME路径
+```
+[root@hadoop001 ~]# echo $HIVE_HOME
+/home/hadoop/apache-hive-1.1.0-cdh5.7.0-bin
+```
 
 > 2.启动
 
@@ -35,13 +42,14 @@ software  存放安装软件
   
   
   
-  如果 用which  hive  查找不到hive 有一个方法 用 cd   $HIVE_HOME 来验证即可 哈哈哈哈
-拷贝驱动：cp mysqldriver $HIVE_HOME/lib
+>  如果 用which  hive  查找不到hive 有一个方法 用 cd   $HIVE_HOME 来验证即可 哈哈哈哈
+```
+拷贝驱动：cp mysqldriver $HIVE_HOME/lib  找群友要一个驱动的mysql-connector-java。jar包
 配置文件修改 cd  conf
 	cp hive-env.sh.template hive-env.sh
-		HADOOP_HOME=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0
-		
-	hive-site.xml
+	HADOOP_HOME=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0 
+	自己建立一个hive-site.xml
+	```
 执行hive 报错
 hive-site.xml:2:6: The processing instruction target matching "[xX][mM][lL]" is not allowed.
 [Fatal Error] hive-site.xml:21:1: XML document structures must start and end within the same entity.
