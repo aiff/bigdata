@@ -45,11 +45,13 @@ software  存放安装软件
 >  如果 用which  hive  查找不到hive 有一个方法 用 cd   $HIVE_HOME 来验证即可 哈哈哈哈
 ```
 拷贝驱动：cp mysqldriver $HIVE_HOME/lib  找群友要一个驱动的mysql-connector-java。jar包
+```
 配置文件修改 cd  conf
 	cp hive-env.sh.template hive-env.sh
 	HADOOP_HOME=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0 
 	自己建立一个hive-site.xml
-	```
+	
+	
 执行hive 报错
 hive-site.xml:2:6: The processing instruction target matching "[xX][mM][lL]" is not allowed.
 [Fatal Error] hive-site.xml:21:1: XML document structures must start and end within the same entity.
