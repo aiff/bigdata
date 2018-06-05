@@ -20,7 +20,60 @@ alter database hive character set latin1;
 
 
 
+都不清楚什么时导入成功了 
+```
 
+
+ >
+    > LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
+Loading data to table default.ruozedata_emp2
+Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+hive> show databases;
+OK
+default
+ruozedata
+Time taken: 0.03 seconds, Fetched: 2 row(s)
+hive> use
+    > ruozedata
+    > use ruozedata
+    > ;
+FAILED: ParseException line 3:0 missing EOF at 'use' near 'ruozedata'
+hive> use ruozedata;
+OK
+Time taken: 0.014 seconds
+hive>
+    >
+    >
+    > LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
+FAILED: SemanticException [Error 10001]: Line 1:94 Table not found 'ruozedata_em                                                                                                                                                             p2'
+hive> create table ruozedata_emp2 (id int,empname string,name string,sar int,dat                                                                                                                                                             e string,dateend string,sarary double,saramax double,mix int,empid int )  row fo                                                                                                                                                             rmat delimited fields terminated by '\t';
+Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+OK
+Time taken: 0.127 seconds
+hive> LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
+Loading data to table ruozedata.ruozedata_emp2
+Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+hive> LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' I                                                                                                                                                             NTO TABLE ruozedata_emp2;
+Loading data to table ruozedata.ruozedata_emp2
+Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+hive> select *from   ruozedata_emp2;
+Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+OK
+
+
+
+````
 
 
 
