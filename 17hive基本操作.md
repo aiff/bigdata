@@ -60,7 +60,7 @@ Warning: fs.defaultFS is not set when running "chgrp" command.
 Warning: fs.defaultFS is not set when running "chmod" command.
 Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
 FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
-```
+
  首先我们看到了 一个提示 unable to alter table 再往上看
  
  Warning: fs.defaultFS is not set when running "chgrp" command.
