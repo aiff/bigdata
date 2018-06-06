@@ -60,6 +60,22 @@ Warning: fs.defaultFS is not set when running "chgrp" command.
 Warning: fs.defaultFS is not set when running "chmod" command.
 Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
 FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+```
+ 首先我们看到了 一个提示 unable to alter table 再往上看
+ 
+ Warning: fs.defaultFS is not set when running "chgrp" command.
+Warning: fs.defaultFS is not set when running "chmod" command.
+因为没有配置好>fs.defaultFS 
+ 
+ 处理：  修改你的  core-site.xml 
+ <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://hadoop:9000</value>
+    <description>NameNode的URI</description>
+  </property>
+  <property>
+ 
+
 hive> LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' I                                                                                                                                                             NTO TABLE ruozedata_emp2;
 Loading data to table ruozedata.ruozedata_emp2
 Warning: fs.defaultFS is not set when running "chgrp" command.
