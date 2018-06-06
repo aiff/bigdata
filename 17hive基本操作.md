@@ -1,4 +1,9 @@
 
+>  打开debug模式可以看到点信息  没不要不要开
+hive -hiveconf hive.root.logger=DEBUG,console
+
+
+
 >   从外导入一个文件
   
 LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' OVERWRITE INTO TABLE ruozedata_emp; 
