@@ -14,12 +14,6 @@ alter database hive character set latin1;
 
 
 
-
-
-
-
-
-
 都不清楚什么时导入成功了 
 ```
 
@@ -44,26 +38,10 @@ FAILED: ParseException line 3:0 missing EOF at 'use' near 'ruozedata'
 hive> use ruozedata;
 OK
 Time taken: 0.014 seconds
-hive>
-    >
-    >
-    > LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
-FAILED: SemanticException [Error 10001]: Line 1:94 Table not found 'ruozedata_em                                                                                                                                                             p2'
-hive> create table ruozedata_emp2 (id int,empname string,name string,sar int,dat                                                                                                                                                             e string,dateend string,sarary double,saramax double,mix int,empid int )  row fo                                                                                                                                                             rmat delimited fields terminated by '\t';
-Warning: fs.defaultFS is not set when running "chgrp" command.
-Warning: fs.defaultFS is not set when running "chmod" command.
-OK
-Time taken: 0.127 seconds
-hive> LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
-Loading data to table ruozedata.ruozedata_emp2
-Warning: fs.defaultFS is not set when running "chgrp" command.
-Warning: fs.defaultFS is not set when running "chmod" command.
-Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
-FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+
 
  首先我们看到了 一个提示 unable to alter table 再往上看
- 
- Warning: fs.defaultFS is not set when running "chgrp" command.
+  Warning: fs.defaultFS is not set when running "chgrp" command.
 Warning: fs.defaultFS is not set when running "chmod" command.
 因为没有配置好>fs.defaultFS 
  
@@ -74,20 +52,6 @@ Warning: fs.defaultFS is not set when running "chmod" command.
     <description>NameNode的URI</description>
   </property>
   <property>
- 
-
-hive> LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' I                                                                                                                                                             NTO TABLE ruozedata_emp2;
-Loading data to table ruozedata.ruozedata_emp2
-Warning: fs.defaultFS is not set when running "chgrp" command.
-Warning: fs.defaultFS is not set when running "chmod" command.
-Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
-FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
-hive> select *from   ruozedata_emp2;
-Warning: fs.defaultFS is not set when running "chgrp" command.
-Warning: fs.defaultFS is not set when running "chmod" command.
-OK
-
-
 
 ````
 
@@ -104,7 +68,7 @@ OK
 
 
 
-DDL：Data Defination Language 
+### DDL：Data Defination Language 
 	描述Hive表数据的结构：create alter drop.....
 	
 	Hive构建在Hadoop之上
@@ -113,7 +77,7 @@ DDL：Data Defination Language
 	
 	Database/Table
 
-CREATE (DATABASE|SCHEMA) [IF NOT EXISTS] database_name
+## CREATE (DATABASE|SCHEMA) [IF NOT EXISTS] database_name
   [COMMENT database_comment]
   [LOCATION hdfs_path]
   [WITH DBPROPERTIES (property_name=property_value, ...)];
