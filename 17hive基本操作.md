@@ -19,12 +19,15 @@ alter database hive character set latin1;
 
 
  >
-    > LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                             VERWRITE INTO TABLE ruozedata_emp2;
+    > LOAD DATA LOCAL INPATH '/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/demo.txt' O                                                                                                                                                            
+    VERWRITE INTO TABLE ruozedata_emp2;
 Loading data to table default.ruozedata_emp2
 Warning: fs.defaultFS is not set when running "chgrp" command.
 Warning: fs.defaultFS is not set when running "chmod" command.
-Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                             , we don't support retries at the client level.
-FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                             ask
+Failed with exception Unable to alter table. For direct MetaStore DB connections                                                                                                                                                           
+, we don't support retries at the client level.
+FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT                                                                                                                                                           
+ask
 hive> show databases;
 OK
 default
