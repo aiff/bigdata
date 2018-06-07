@@ -85,7 +85,7 @@ Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/hadoop/hi
 ```
 ERROR [main]: metastore.RetryingHMSHandler (RetryingHMSHandler.java:invokeInternal(203)) - Retrying HMSHandler after 2000 ms (attempt 6 of 10) with error: javax.jdo.JDODataStoreException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OPTION SQL_SELECT_LIMIT=DEFAULT' at line 1
 ```
-
+![For direct MetaStore DB connections](https://github.com/aiff/bigdata/blob/master/img/hivemask.png)
 处理  更换mysql驱动
  http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.26  直接下载把  如果要学习就用maven
  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
