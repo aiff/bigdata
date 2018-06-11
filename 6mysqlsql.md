@@ -24,6 +24,8 @@ cp /etc/my.cnf /etc/my3307.cnf
             mgr int,
             hiredate timestamp, sal int,  comm int, deptno int
                   )CHARSET=utf8;SE db_name;　　//db_name为数据库名
+ insert into emp  values(736	,'SMITH',	'CLERK'	 ,  7902	 ,   '1980-12-17'	 , 800.00	,null,	20);
+ insert into emp  values(7499,	'ALLEN',	'SALESMAN'	,7698,	'1981-2-20'	,1600.00,	300.00,30);
 
 >GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限
 >SHOW processlist;  查看谁在操作
