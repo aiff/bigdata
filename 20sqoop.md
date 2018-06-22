@@ -33,3 +33,38 @@ org.apache.hadoop.security.AccessControlException: Permission denied: user=root,
 导出
 
 作业！！1
+
+
+
+1.建立城市表
+CREATE DATABASE ruozedata;
+
+DROP TABLE city_info;
+CREATE TABLE `city_info` (
+  `city_id` int(11) DEFAULT NULL,
+  `city_name` varchar(255) DEFAULT NULL,
+  `area` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+insert  into `city_info`(`city_id`,`city_name`,`area`) values (1,'BEIJING','NC'),(2,'SHANGHAI','EC'),(3,'NANJING','EC'),(4,'GUANGZHOU','SC'),(5,'SANYA','SC'),(6,'WUHAN','CC'),(7,'CHANGSHA','CC'),(8,'XIAN','NW'),(9,'CHENGDU','SW'),(10,'HAERBIN','NE');
+
+
+
+2.建立生产品表
+
+create table product_info(product_id int,product_name string,extend_info string)
+
+
+
+
+
+
+CREATE TABLE `product_info` (
+  `product_id` int(11) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `extend_info` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
