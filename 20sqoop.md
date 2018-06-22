@@ -51,16 +51,22 @@ insert  into `city_info`(`city_id`,`city_name`,`area`) values (1,'BEIJING','NC')
 
 
 
+sqoop import \
+--connect jdbc:mysql://localhost:3306/ruozedata \
+--username root --password 123456 \
+--table city_info -m 1 \
+--mapreduce-job-name city_info_imp \
+--delete-target-dir \
+--hive-table test.city_info \
+--hive-import \
+--fields-terminated-by '\t' \
+--hive-overwrite;
+
+
+
+
+
 2.建立生产品表
-
-create table product_info(product_id int,product_name string,extend_info string)
-
-
-
-
-
-
-
 
 
 
