@@ -60,11 +60,25 @@ create table product_info(product_id int,product_name string,extend_info string)
 
 
 
+
+
+
+
+
+
+
 CREATE TABLE `product_info` (
   `product_id` int(11) DEFAULT NULL,
   `product_name` varchar(255) DEFAULT NULL,
   `extend_info` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+3.hive  用户行为
+
+create table user_click(user_id int,session_id string,action_time string,city_id int,product_id int)
+partitioned by (create_day string)
+row format delimited fields terminated by ',';
+load data local inpath '/home/hadoop/data/user_click.txt' into table user_click partition(create_day='2016-05-05');
 
 
