@@ -24,3 +24,12 @@ org.apache.hadoop.security.AccessControlException: Permission denied: user=root,
 找了半天原来是权限搞错了  搞错了....
 最好的方法 冲新编译  记得还要sudoers配上
     hadoop  ALL=(ALL)       NOPASSWD:ALL
+
+
+
+
+导入
+
+导出
+
+作业！！1
