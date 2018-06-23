@@ -161,10 +161,11 @@ local: 从本地文件系统加载数据到hive表
 OVERWRITE: 加载数据到表的时候数据的处理方式，覆盖
 非OVERWRITE：追加
 
-
+##  CTAS
 CREATE table ruozedata_emp2 as select * from ruozedata_emp;
 >   可以到网页上观看   1287.0.0.1:8088/cluster/aps 任务
 CREATE table ruozedata_emp3 like ruozedata_emp;
+
 ALTER TABLE ruozedata_emp3 RENAME TO ruozedata_emp3_new;
 
 create alter drop show desc 
@@ -173,7 +174,7 @@ create alter drop show desc
 	ruozedata_emp_managed
 	drop：hdfs+meta
 	
-EXTERNAL：外部表 
+#EXTERNAL：外部表 
 create EXTERNAL table ruozedata_emp_external 
 (empno int, ename string, job string, mgr int, hiredate string, salary double, comm double, deptno int)
 ROW FORMAT DELIMITED 
