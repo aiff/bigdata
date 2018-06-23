@@ -463,4 +463,40 @@ constraint_specification:
   : [, PRIMARY KEY (col_name, ...) DISABLE NOVALIDATE ]
     [, CONSTRAINT constraint_name FOREIGN KEY (col_name, ...) REFERENCES table_name(col_name, ...) DISABLE NOVALIDATE 
  
+ #查询表结构
  
+ ```
+ 
+    > desc formatted  city_info;
+OK
+# col_name              data_type               comment
+
+city_id                 int
+city_name               string
+area                    string
+
+# Detailed Table Information
+Database:               default
+Owner:                  hadoop
+CreateTime:             Fri Jun 22 22:19:30 CST 2018
+LastAccessTime:         UNKNOWN
+Protect Mode:           None
+Retention:              0
+Location:               hdfs://hadoop:9000/user/hive/warehouse/city_info
+Table Type:             MANAGED_TABLE
+Table Parameters:
+        transient_lastDdlTime   1529677170
+
+# Storage Information
+SerDe Library:          org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+InputFormat:            org.apache.hadoop.mapred.TextInputFormat
+OutputFormat:           org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+Compressed:             No
+Num Buckets:            -1
+Bucket Columns:         []
+Sort Columns:           []
+Storage Desc Params:
+        field.delim             \t
+        serialization.format    \t
+Time taken: 0.088 seconds, Fetched: 29 row(s)
+```
