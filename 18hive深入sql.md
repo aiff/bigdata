@@ -45,4 +45,38 @@ nonono
 
 用fs  -ls 才能那查看分区文件
 动态分区
+```
+create table ruozedata_emp 
+(empno int, ename string, job string, mgr int, hiredate string, salary double, comm double, deptno int)
+ROW FORMAT DELIMITED 
+
+FIELDS TERMINATED BY '\t' ;
+
+
+LOAD DATA LOCAL INPATH '/home/hadoop/data/emp.txt' OVERWRITE INTO TABLE ruozedata_emp; 
+
+
+动态分区明确要求：分区字段写在select的最后面	
+insert into table ruozedata_dynamic_emp partition(deptno)
+select empno,ename,job,mgr,hiredate,salary,comm,deptno from ruozedata_emp ;
+	
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+
+
+
+
+这是hive中常用的设置key=value的方式
+语法格式： 
+	set key=value; 设置	
+	set key;       取值
+
+	select *from ruozedata_dynamic_emp;
+
+
+
+
+
+
+```
 
