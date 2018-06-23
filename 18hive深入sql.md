@@ -44,7 +44,7 @@ nonono
 只有  where event_month='2014-05'; （如果是分区查询一定要带上分区的条件）
 
 用fs  -ls 才能那查看分区文件
-动态分区
+> 动态分区
 ```
 create table ruozedata_emp 
 (empno int, ename string, job string, mgr int, hiredate string, salary double, comm double, deptno int)
