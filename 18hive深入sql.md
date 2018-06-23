@@ -33,6 +33,12 @@ load data local inpath '/home/hadoop/data/1.txt' overwrite into table a;
 
 静态分区
 
+alter table PARTITIONS convert to character set latin1;
+alter table PARTITION_KEYS convert to character set latin1;
+
+
+在ruozedata下建立了分区表 用fs  -ls 查看不到分区文件 怎么办怎么办
+索性不用ruozedata 另外创建！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
 动态分区
 
