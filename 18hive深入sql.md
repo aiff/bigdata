@@ -39,6 +39,10 @@ alter table PARTITION_KEYS convert to character set latin1;
 
 在ruozedata下建立了分区表 用fs  -ls 查看不到分区文件 怎么办怎么办
 索性不用ruozedata 另外创建！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+nonono
 
+只有  where event_month='2014-05'; （如果是分区查询一定要带上分区的条件）
+
+用fs  -ls 才能那查看分区文件
 动态分区
 
