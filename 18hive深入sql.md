@@ -29,3 +29,10 @@ load data local inpath '/home/hadoop/data/1.txt' overwrite into table a;
 
 
 ### 分区表
+
+
+静态分区
+
+
+动态分区
+
