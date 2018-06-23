@@ -71,7 +71,15 @@ A --> B
 
 
 
+```
 
+忘记root密码
+
+mysqld --skip-grant-tables &
+mysql> update mysql.user set password=PASSWORD('新密码') where User='root'; 
+mysql> flush privileges; 
+mysql> quit
+```
 
 
 ####  
