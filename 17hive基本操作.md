@@ -118,7 +118,7 @@ create  alter drop show desc use
 	map/struct/array
 
 
-
+##建立普通表
 CREATE TABLE aaa
 (id int comment 'this is id', name string comment 'this id name' )
 comment 'this is ruozedata_person'
@@ -163,7 +163,7 @@ OVERWRITE: 加载数据到表的时候数据的处理方式，覆盖
 
 
 CREATE table ruozedata_emp2 as select * from ruozedata_emp;
-
+>   可以到网页上观看   1287.0.0.1:8088/cluster/aps 任务
 CREATE table ruozedata_emp3 like ruozedata_emp;
 ALTER TABLE ruozedata_emp3 RENAME TO ruozedata_emp3_new;
 
