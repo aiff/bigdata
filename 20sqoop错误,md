@@ -11,3 +11,41 @@ export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*
 
 
  cd hive-site.xml  /home/hadoop/app/sqoop-1.4.6-cdh5.7.0/conf
+ 
+```
+vi hive-site.xml 
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+        <property>
+                <name>javax.jdo.option.ConnectionURL</name>
+                <value>jdbc:mysql://138.147.166.7:3306/ruozedata_basic03?createDatabaseIfNotExist=true</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionDriverName</name>
+                <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionUserName</name>
+                <value>root</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionPassword</name>
+                <value>123456</value>
+        </property>
+</configuration>
+~
+
+```
+
+hive-env
+
+
+# Set HADOOP_HOME to point to a specific hadoop install directory
+# HADOOP_HOME=${bin}/../../hadoop
+export HADOOP_HOME=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0
+# Hive Configuration Directory can be controlled by:
+ export HIVE_CONF_DIR=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0/conf
+
+# Folder containing extra ibraries required for hive compilation/execution can be controlled by:
+# export HIVE_AUX_JARS_PATH=
