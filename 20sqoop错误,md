@@ -8,3 +8,6 @@ export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*
 
 
 后复制hive/conf下的hive-site.xml到sqoop工作目录 解决
+
+
+ cd hive-site.xml  /home/hadoop/app/sqoop-1.4.6-cdh5.7.0/conf
