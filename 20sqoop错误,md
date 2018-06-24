@@ -2,3 +2,9 @@
 ## Sqoop 数据导入到Hive中报错 HIVE_CONF_DIR
 
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*
+
+
+[Error 10072]: Database does not exist
+
+
+后复制hive/conf下的hive-site.xml到sqoop工作目录 解决
