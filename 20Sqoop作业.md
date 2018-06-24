@@ -6,6 +6,8 @@
 1.建立城市表
 CREATE DATABASE ruozedata;
 
+CREATE DATABASE ruozedata;
+
 DROP TABLE city_info;
 CREATE TABLE `city_info` (
   `city_id` int(11) DEFAULT NULL,
@@ -15,6 +17,7 @@ CREATE TABLE `city_info` (
 
 
 insert  into `city_info`(`city_id`,`city_name`,`area`) values (1,'BEIJING','NC'),(2,'SHANGHAI','EC'),(3,'NANJING','EC'),(4,'GUANGZHOU','SC'),(5,'SANYA','SC'),(6,'WUHAN','CC'),(7,'CHANGSHA','CC'),(8,'XIAN','NW'),(9,'CHENGDU','SW'),(10,'HAERBIN','NE');
+
 
 
 
