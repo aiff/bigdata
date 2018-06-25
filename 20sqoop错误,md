@@ -1,4 +1,7 @@
 
+ hive -hiveconf hive.root.logger=DEBUG,console
+
+
 ## Sqoop 数据导入到Hive中报错 HIVE_CONF_DIR
 
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*
