@@ -107,6 +107,36 @@ su - 1.切换用户之后 执行环境变量。bash_profile   2.进入家目录
 
 #
 > /ext/profile
+给用户sudo权限 
+文件  
+jepson  ALL=(root)  NOPASSWD:ALL  
+vi /etc/sudoers
+
+
+
+
+[hadoop@hadoop spark-2.2.1-bin-hadoop2.7]$ echo  $(pgrep  -f  mysql)--查找包含
+22459 23129
+
+
+[root@hadoop ~]# netstat -nlp|grep  23129
+tcp        0      0 :::3306                     :::*                        LISTEN      23129/mysqld
+unix  2      [ ACC ]     STREAM     LISTENING     14232130 23129/mysqld        /usr/local/mysql/data/mysql.sock
+[root@hadoop ~]#  ps  -ef   |grep  mysql
+root      8118  8083  0 21:58 pts/0    00:00:00 grep mysql
+514      22459     1  0 Jun26 ?        00:00:00 /bin/sh ./bin/mysqld_safe --skip-grant-tables
+514      23129 22459  0 Jun26 ?        00:02:58 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --skip-grant-tables --log-error=/usr/local/mysql/data/hostname.err --pid-file=/usr/local/mysql/data/hostname.pid --socket=/usr/local/mysql/data/mysql.sock --port=3306
+
+
+
+
+
+
+
+
+
+
+
 
 Linux 系统中有软链接和硬链接两种特殊的“文件”。
 
