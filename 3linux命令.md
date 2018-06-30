@@ -58,13 +58,47 @@ $qq/*   代笔文件下所有的东西
 $qq 代表  文件夹本身和里面的所有东西
  
  
- 
- 
 >history !70 查看历史命令和执行第70行
+#  用户
+用户  用户组
+
+[hadoop@hadoop 3]$ id
+uid=515(hadoop) gid=515(hadoop) 组=515(hadoop) 环境=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+[hadoop@hadoop 3]$ ll /usr/sbin/user*
+-rwxr-x---. 1 root root 111320 2月   9 2016 /usr/sbin/useradd
+-rwxr-x---. 1 root root  73656 2月   9 2016 /usr/sbin/userdel
+-rws--x--x. 1 root root  42384 2月  25 2010 /usr/sbin/userhelper
+-rwxr-x---. 1 root root 115096 2月   9 2016 /usr/sbin/usermod
+-rwsr-xr-x. 1 root root   9000 4月  12 2016 /usr/sbin/usernetctl
+[hadoop@hadoop 3]$ ll /usr/sbin/group*
+-rwxr-x---. 1 root root 59096 2月   9 2016 /usr/sbin/groupadd
+-rwxr-x---. 1 root root 54800 2月   9 2016 /usr/sbin/groupdel
+-rwxr-x---. 1 root root 54960 2月   9 2016 /usr/sbin/groupmems
+-rwxr-x---. 1 root root 73680 2月   9 2016 /usr/sbin/groupmod
+
+gid  主组
+group  所有组
+[hadoop@hadoop 3]$ id hadoop
+uid=515(hadoop) gid=515(hadoop) 组=515(hadoop)
+
+[hadoop@hadoop 3]$ cat  /etc/passwd  | grep  hadoop  在管道过滤 
+hadoop:x:515:515::/home/hadoop:/bin/bash
 
 
-#
-> tail  -f   根据文件描述符进行追踪，当文件改名或被删除，追踪停止   tail  -100f  倒着查看最新100行 
+su - 1.切换用户之后 执行环境变量。bash_profile   2.进入家目录
+
+
+
+
+
+
+
+
+> tail  -f   根据文件描述符进行追踪，当文件改名或被删除，追踪停止   tail  -100f  
+
+
+倒着查看最新100行 
 >> tail  -F  --retry(被截断还调用-f)，根据文件名进行追踪，并保持重试，即该文件被删除或改名后，如果再次创建相同的文件名，会继续追踪
 #
 > su xxx  切换了root身份，但Shell环境仍然是普通用户的Shell；  
