@@ -37,13 +37,29 @@ mkdir  4 5  6 同层
 source /etc/profile  生效
 
 
-个人:  .bash_profile 、.bashrc
+> 个人:  .bash_profile 
+
+>.bashrc
+
+
 ~/.bash_profile
 source ~/.bash_profile  生效
 . ~/.bash_profile     生效
 
-> 删除文件   rm  -rf  -r文件 f强制
+> 删除文件   rm  -rf  -r文件 
+-f强制  不咨询
 
+qq=6
+echo  $qq
+rm  —rf  $pqq/*
+
+$qq/*   代笔文件下所有的东西
+
+$qq 代表  文件夹本身和里面的所有东西
+ 
+ 
+ 
+ 
 >history !70 查看历史命令和执行第70行
 
 
