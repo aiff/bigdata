@@ -35,8 +35,17 @@ drwxr-xr-x. 2 root   root       4096 4月  12 17:12 视频
 ###    第三列  所属的组
 chmod  改文件权限  三个的总和   4+2+1 777 全部给完
 chmod  646  qq.log  rw=6
-# cd /etc/yum.repos.d/
-## 正文
+./www.sh
+给文件权限
+### chmod   764 xx.sh
+可执行  ：针对  shell脚本
+chmod +x 每组都加x 注意没必要
+vi shift+$  尾行
+set nu 行号
+set nonu
+：100  定位行
+
+## yum  ************************
 
 
 </code></pre>
