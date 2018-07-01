@@ -21,12 +21,10 @@ which这个命令，是去找命令，请问是从哪个里面找的
 防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
 ##正文
 <pre><code>这是一个代码区块。
-************** 
 ##  ll
 >drwxr-xr-x. 2 root   root       4096 4月  12 17:12 模板
 drwxr-xr-x. 2 root   root       4096 4月  12 17:12 视频
-
-
+</code>code
 #   第一列   
 >  R 4  W 2  X  1
 第一个   d文件夹   -文件  l 链接
@@ -35,9 +33,11 @@ drwxr-xr-x. 2 root   root       4096 4月  12 17:12 视频
       第三组 r-x    5 代表其他组的所有用户对这个文件或文件夹的权限
 ##  第三列  所属的用户
 ###    第三列  所属的组
-
-
 chmod  改文件权限  三个的总和   4+2+1 777 全部给完
+chmod  646  qq.log  rw=6
+
+
+
 
 </code></pre>
 <code>+tar解压，一般会出现什么问题?
@@ -45,14 +45,14 @@ chmod  改文件权限  三个的总和   4+2+1 777 全部给完
                             16.查看文件夹大小，哪个命令?
               防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
 
-</code>code
+
 ##主动防御
 使用 `  fail2ban `  锁定ip
 
 *tar
  *   cd
      ***  python  setup.py install***
-    
+  **************   
 -16.查看文件夹大小，哪个命令?
 -防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
         
