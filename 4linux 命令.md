@@ -59,10 +59,14 @@ crontab  -e
  第二个：小时
  第三个：日  。。月。。。。周
  
- 
+ > 绝对路径和相对路径
+ ./xx.sh  当前路径
+ ./qq.sh  &  后台执行  关闭前台还是可以继续执行
+nohug  ./data.sh   ---->nohug.out  按ctrl+c就退出
 
+nohug  ./data.sh     &  按 
 
-
+screen   ctrl+a+b 退出
 ## yum  ************************
 
 
