@@ -21,6 +21,7 @@ which这个命令，是去找命令，请问是从哪个里面找的
 防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
 ##正文
 <pre><code>这是一个代码区块。
+************** 
 ##  ll
 >drwxr-xr-x. 2 root   root       4096 4月  12 17:12 模板
 drwxr-xr-x. 2 root   root       4096 4月  12 17:12 视频
@@ -51,7 +52,7 @@ chmod  改文件权限  三个的总和   4+2+1 777 全部给完
 *tar
  *   cd
      ***  python  setup.py install***
-  **************   
+    
 -16.查看文件夹大小，哪个命令?
 -防止root 登陆 修改  vi /ext/passwd里面的文件 增加nologin
         
