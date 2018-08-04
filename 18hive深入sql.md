@@ -16,12 +16,38 @@ from   ruozedata_emp4;
 
 ```
 
-
+------a
 join
-create table  a (id  int,name string)
-row  format  delimited fields  terminated by '\t';
-create table  b (id  int,age int)
-row  format  delimited fields  terminated by '\t';
+1       ruoze
+2       j
+3       k
+----b
+1       30
+2       29
+4       21
+
+create table a(
+id int, name string
+) row format delimited fields terminated by '\t';
+
+create table b(
+id int, age int
+) row format delimited fields terminated by '\t';
+
+load data local inpath '/home/hadoop/data/join_a.txt' overwrite into table a;
+load data local inpath '/home/hadoop/data/join_b.txt' overwrite into table b;
+
+inner join = join
+1       ruoze   30
+2       j       29
+
+outer join : left right full
+1       ruoze   30
+2       j       29
+3       k       NULL
+	
+frm   a  full join  b on xxx=xxx
+
 
 
 插入的数据 用tab键  隔开  隔开！！！！
