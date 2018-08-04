@@ -1,5 +1,7 @@
 ##  聚合函数
-> where  xx=1  having  sum(xxx)>100;
+>   sum   avg  where  xx=1  having  sum(xxx)>100; 
+> limit   6   6tiao 
+
 ```
 select ename, salary, 
        case
