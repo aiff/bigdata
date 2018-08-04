@@ -185,7 +185,7 @@ LOCATION "/ruozedata/external/emp" ;
 hdfs://hadoop000:8020/ddddd
 s3a://xxx/yyyy 
 s3n
-
+### create table ruozedata_emp4 as select  *from ruozedata_emp;
 create table ruozedata_emp4 like ruozedata_emp;
 
 INSERT OVERWRITE TABLE ruozedata_emp4
