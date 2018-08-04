@@ -170,11 +170,11 @@ ALTER TABLE ruozedata_emp3 RENAME TO ruozedata_emp3_new;
 
 create alter drop show desc 
 
-创建表默认使用的是MANAGED_TABLE：内部表
+# 创建表默认使用的是MANAGED_TABLE：内部表
 	ruozedata_emp_managed
 	drop：hdfs+meta
 	
-#EXTERNAL：外部表 
+# EXTERNAL：外部表 删除后 还有留底
 create EXTERNAL table ruozedata_emp_external 
 (empno int, ename string, job string, mgr int, hiredate string, salary double, comm double, deptno int)
 ROW FORMAT DELIMITED 
