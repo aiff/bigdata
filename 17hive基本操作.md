@@ -66,16 +66,6 @@ Warning: fs.defaultFS is not set when running "chmod" command.
 
 
 
-
-
-
-
-
-
-
-
-
-
 ### DDL：Data Defination Language 
 	描述Hive表数据的结构：create alter drop.....
 	
@@ -194,7 +184,7 @@ select * FROM ruozedata_emp;
 INSERT INTO TABLE ruozedata_emp4
 SELECT empno,job, ename,mgr, hiredate, salary, comm, deptno from ruozedata_emp;
  
-重跑：幂等 ***** 
+## 重跑：解决不了幂等 ***** 
 log
 	2055  ==> 20
 	2054  ==> 20
@@ -278,40 +268,8 @@ constraint_specification:
   : [, PRIMARY KEY (col_name, ...) DISABLE NOVALIDATE ]
     [, CONSTRAINT constraint_name FOREIGN KEY (col_name, ...) REFERENCES table_name(col_name, ...) DISABLE NOVALIDATE 
 
-
-
-
-
-
-
-	
 	
 
-DDL：Data Defination Language 
-    描述Hive表数据的结构：create alter drop.....
-     
-    Hive构建在Hadoop之上
-        Hive的数据存放在HDFS之上
-        Hive的元数据可以存放在RDBMS之上
-     
-    Database/Table
- 
-CREATE (DATABASE|SCHEMA) [IF NOT EXISTS] database_name
-  [COMMENT database_comment]
-  [LOCATION hdfs_path]
-  [WITH DBPROPERTIES (property_name=property_value, ...)];
-   
-default是Hive中默认的一个数据库 
-    /user/hive/warehouse/
-     
-create database hive;
- 
-/user/hive/warehouse/<databasename>.db
- 
- 
-DROP (DATABASE|SCHEMA) [IF EXISTS] database_name [RESTRICT|CASCADE];
- 
-create  alter drop show desc use
      
      
  
