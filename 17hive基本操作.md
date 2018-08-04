@@ -314,19 +314,7 @@ DROP (DATABASE|SCHEMA) [IF EXISTS] database_name [RESTRICT|CASCADE];
 create  alter drop show desc use
      
      
-基本数据类型  
-    疯！！！！！！！！！！！！！！
-    int bigint  float  double  decimal
-    boolean         XXX
-    string
-    date/timestamp  XXX
-         
-分隔符 
-    行: \n
-    列: \001 ^A  ==>   
-        1   zhangsan    30
-        1$$$zhangsan$$$30
-    map/struct/array
+ 
      
 Table
 use ruozedata;
@@ -341,12 +329,6 @@ create table ruozedata_emp
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY '\t' ;
   
-LOAD DATA LOCAL INPATH '/home/hadoop/data/emp.txt' OVERWRITE INTO TABLE ruozedata_emp; 
-local: 从本地文件系统加载数据到hive表
-非local：从HDFS文件系统加载数据到hive表
- 
-OVERWRITE: 加载数据到表的时候数据的处理方式，覆盖
-非OVERWRITE：追加
  
  
 CREATE table ruozedata_emp2 as select * from ruozedata_emp;
@@ -380,90 +362,7 @@ select * FROM ruozedata_emp;
 INSERT INTO TABLE ruozedata_emp4
 SELECT empno,job, ename,mgr, hiredate, salary, comm, deptno from ruozedata_emp;
   
-重跑：幂等 ***** 
-log
-    2055  ==> 20
-    2054  ==> 20
-    ....  
-    1959  ==> 19
-  
-CREATE [TEMPORARY] [EXTERNAL] TABLE [IF NOT EXISTS] [db_name.]table_name    -- (Note: TEMPORARY available in Hive 0.14.0 and later)
-  [(col_name data_type [COMMENT col_comment], ... [constraint_specification])]
-  [COMMENT table_comment]
-  [PARTITIONED BY (col_name data_type [COMMENT col_comment], ...)]
-  [CLUSTERED BY (col_name, col_name, ...) [SORTED BY (col_name [ASC|DESC], ...)] INTO num_buckets BUCKETS]
-  [SKEWED BY (col_name, col_name, ...)                  -- (Note: Available in Hive 0.10.0 and later)]
-     ON ((col_value, col_value, ...), (col_value, col_value, ...), ...)
-     [STORED AS DIRECTORIES]
-  [
-   [ROW FORMAT row_format] 
-   [STORED AS file_format]
-     | STORED BY 'storage.handler.class.name' [WITH SERDEPROPERTIES (...)]  -- (Note: Available in Hive 0.6.0 and later)
-  ]
-  [LOCATION hdfs_path]
-  [TBLPROPERTIES (property_name=property_value, ...)]   -- (Note: Available in Hive 0.6.0 and later)
-  [AS select_statement];   -- (Note: Available in Hive 0.5.0 and later; not supported for external tables)
-  
-CREATE [TEMPORARY] [EXTERNAL] TABLE [IF NOT EXISTS] [db_name.]table_name
-  LIKE existing_table_or_view_name
-  [LOCATION hdfs_path];
-  
-data_type
-  : primitive_type
-  | array_type
-  | map_type
-  | struct_type
-  | union_type  -- (Note: Available in Hive 0.7.0 and later)
-  
-primitive_type
-  : TINYINT
-  | SMALLINT
-  | INT
-  | BIGINT
-  | BOOLEAN
-  | FLOAT
-  | DOUBLE
-  | DOUBLE PRECISION -- (Note: Available in Hive 2.2.0 and later)
-  | STRING
-  | BINARY      -- (Note: Available in Hive 0.8.0 and later)
-  | TIMESTAMP   -- (Note: Available in Hive 0.8.0 and later)
-  | DECIMAL     -- (Note: Available in Hive 0.11.0 and later)
-  | DECIMAL(precision, scale)  -- (Note: Available in Hive 0.13.0 and later)
-  | DATE        -- (Note: Available in Hive 0.12.0 and later)
-  | VARCHAR     -- (Note: Available in Hive 0.12.0 and later)
-  | CHAR        -- (Note: Available in Hive 0.13.0 and later)
-  
-array_type
-  : ARRAY < data_type >
-  
-map_type
-  : MAP < primitive_type, data_type >
-  
-struct_type
-  : STRUCT < col_name : data_type [COMMENT col_comment], ...>
-  
-union_type
-   : UNIONTYPE < data_type, data_type, ... >  -- (Note: Available in Hive 0.7.0 and later)
-  
-row_format
-  : DELIMITED [FIELDS TERMINATED BY char [ESCAPED BY char]] [COLLECTION ITEMS TERMINATED BY char]
-        [MAP KEYS TERMINATED BY char] [LINES TERMINATED BY char]
-        [NULL DEFINED AS char]   -- (Note: Available in Hive 0.13 and later)
-  | SERDE serde_name [WITH SERDEPROPERTIES (property_name=property_value, property_name=property_value, ...)]
-  
-file_format:
-  : SEQUENCEFILE
-  | TEXTFILE    -- (Default, depending on hive.default.fileformat configuration)
-  | RCFILE      -- (Note: Available in Hive 0.6.0 and later)
-  | ORC         -- (Note: Available in Hive 0.11.0 and later)
-  | PARQUET     -- (Note: Available in Hive 0.13.0 and later)
-  | AVRO        -- (Note: Available in Hive 0.14.0 and later)
-  | INPUTFORMAT input_format_classname OUTPUTFORMAT output_format_classname
-  
-constraint_specification:
-  : [, PRIMARY KEY (col_name, ...) DISABLE NOVALIDATE ]
-    [, CONSTRAINT constraint_name FOREIGN KEY (col_name, ...) REFERENCES table_name(col_name, ...) DISABLE NOVALIDATE 
- 
+
  #查询表结构
  
  ```
