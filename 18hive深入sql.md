@@ -82,6 +82,29 @@ Deleted /user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_cl
 rm: `/user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt': No such file or directory
 ```
 
+
+[hadoop@hadoop001 data]$ hadoop  fs -put order_par.txt  /user/hive/warehouse/test.db/order_partition/event_month=2015-06  
+
+
+
+
+ALTER TABLE order_partition ADD IF NOT EXISTS
+PARTITION (event_month='2015-06') ;
+
+
+多级分区
+create table order_mulit_partition(
+ordernumber string,
+eventtime string
+)
+partitioned by (event_month string,event_day string)
+row format delimited fields terminated by '\t';
+
+LOAD DATA LOCAL INPATH '/home/hadoop/data/order.txt' 
+OVERWRITE INTO TABLE order_mulit_partition 
+PARTITION(event_month='2014-05', event_day='01'); 
+
+
 在ruozedata下建立了分区表 用fs  -ls 查看不到分区文件 怎么办怎么办(表数据不对 或者hive没退出)
 索性不用ruozedata 另外创建！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 nonono
