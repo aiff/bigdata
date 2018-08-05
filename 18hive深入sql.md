@@ -63,7 +63,24 @@ load data local inpath '/home/hadoop/data/1.txt' overwrite into table a;
 
 alter table PARTITIONS convert to character set latin1;
 alter table PARTITION_KEYS convert to character set latin1;
-
+# 删除数据  要进入到hdfs
+```
+[hadoop@hadoop001 data]$ hadoop  fs -ls /user/hive/warehouse/test.db/order_partition
+18/08/01 16:07:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+drwxr-xr-x   - hadoop supergroup          0 2018-08-01 15:56 /user/hive/warehouse/test.db/order_partition/event_month=2014-05
+[hadoop@hadoop001 data]$ hadoop  fs -ls /user/hive/warehouse/test.db/order_partition/event_month=2014-05
+18/08/01 16:09:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+-rwxr-xr-x   1 hadoop supergroup     725264 2018-08-01 15:56 /user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt
+[hadoop@hadoop001 data]$ hadoop  fs -rmr  /user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt
+rmr: DEPRECATED: Please use 'rm -r' instead.
+18/08/01 16:10:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Deleted /user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt
+[hadoop@hadoop001 data]$ hadoop  fs -rm  /user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt  
+18/08/01 16:10:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rm: `/user/hive/warehouse/test.db/order_partition/event_month=2014-05/user_click.txt': No such file or directory
+```
 
 在ruozedata下建立了分区表 用fs  -ls 查看不到分区文件 怎么办怎么办(表数据不对 或者hive没退出)
 索性不用ruozedata 另外创建！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
