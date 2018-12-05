@@ -1,0 +1,23 @@
+#  空间不足
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        18G   16G  988M  95% /
+tmpfs           1.9G   72K  1.9G   1% /dev/shm
+/dev/sda1       283M   39M  229M  15% /boot
+#du -sh *
+
+
+
+# mysqld_safe --skip-grant-tables &
+1
+&，表示在后台运行，不再后台运行的话，就再打开一个终端吧。 
+接着登陆MySQL修改密码
+
+# mysql
+mysql> use mysql;
+mysql> UPDATE user SET password=password("test123") WHERE user='root';   
+mysql> exit;   
+--------------------- 
+作者：江湖人称小程 
+来源：CSDN 
+原文：https://blog.csdn.net/qq_28082757/article/details/72395892 
+版权声明：本文为博主原创文章，转载请附上博文链接！
