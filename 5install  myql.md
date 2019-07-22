@@ -1,3 +1,7 @@
+#最小化版本的centos perl都没有的
+ yum -y install perl perl-devel
+ ATAL ERROR: please install the following Perl modules before executing
+ yum install -y perl-Data-Dumper 
 #安装mysql数据库5.6  不常用
 >安装jdk 
 .....
