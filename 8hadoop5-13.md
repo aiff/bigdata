@@ -107,12 +107,23 @@ etc/hadoop/core-site.xml:
 ***********单独配置******
 <>etc/hadoop/hdfs-site.xml:
 
-<configuration>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-</configuration>
+ <property>
+<name>dfs.datanode.data.dir</name>
+<value>/home/hadoop/app/tmp/dfs/data</value>
+</property>
+<property>
+<name>dfs.namenode.secondary.http-address</name>
+<value>hadoop-01:50090</value>
+</property>
+<property>
+<name>dfs.namenode.secondary.https-address</name>
+<value>hadoop-01:50091</value>
+</property>
+<property>
+ <name>dfs.replication</name>
+ <value>1</value>
+</property>
+
 ```
 >4.5ssh
 [root@hadoop000 ~]# rm -rf .ssh
