@@ -30,3 +30,31 @@ cp /etc/my.cnf /etc/my3307.cnf
 >GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限
 >SHOW processlist;  查看谁在操作
 > kill  id 要注意
+
+
+
+````
+
+a.表名称 字段名称 不能是中文 不能是汉语拼音 
+b.统一风格： 已经存在的表 风格是什么==>leader check
+		create_user
+		createuser
+	    新项目 风格是什么 ==》 by you
+
+	    ctime
+	    cretime
+	    createtime
+	    cre_time
+	    create_time
+
+c.第一个字段 必然是 id 自增长 主键 无意义  (懂不懂mysql)
+
+d.一张表只有一个主键 primary key==》id
+     unique+not null
+
+     业务字段 比如需要唯一  unique约束
+
+     ALTER TABLE ruozedata.rzdata 
+     ADD CONSTRAINT rzdata_un UNIQUE KEY (name) ;
+
+````
