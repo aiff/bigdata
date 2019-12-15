@@ -358,3 +358,5 @@ Storage Desc Params:
         serialization.format    \t
 Time taken: 0.088 seconds, Fetched: 29 row(s)
 ```
+#   内部表改外部表 EXTER要全部大写 注意了
+
