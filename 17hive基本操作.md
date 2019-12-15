@@ -360,3 +360,16 @@ Time taken: 0.088 seconds, Fetched: 29 row(s)
 ```
 #   内部表改外部表 EXTER要全部大写 注意了
 
+#DML   加载数据 
+#动态分区  关闭样额模式
+
+
+
+聚合 max
+min
+count
+
+
+
+
+  
