@@ -17,7 +17,7 @@ FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.MoveT
 
 alter database hive character set latin1;
 
-
+#  导入的时候不要复制语句进去  要写好再传过去  空格不会很好的处理掉
 
 都不清楚什么时导入成功了 
 ```
