@@ -5,7 +5,9 @@
 ## Sqoop 数据导入到Hive中报错 HIVE_CONF_DIR
 
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HIVE_HOME/lib/*
+## 问题出现的原因是，sqoop安装目录中没有hive相关的包，我们把hive的lib目录下hive相关的包拷贝到sqoop的lib下即可
 
+cp 
 
 [Error 10072]: Database does not exist
 
